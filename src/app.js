@@ -60,6 +60,7 @@ app.get('/weather', (req, res) => {
                     error
                 })
             } else {
+                console.log(data)
                 return res.send({
                     forecast: data,
                     address: req.query.search,

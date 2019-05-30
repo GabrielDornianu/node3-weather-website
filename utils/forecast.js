@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to find weather. Try another search')
         } else {
-            callback('', `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out and ${body.currently.precipProbability}% chance of rain`)
+            callback('', `${body.daily.data[0].summary} . The high today is ${body.daily.data[0].temperatureHigh} with a low of ${body.daily.data[0].temperatureLow}. It is currently ${body.currently.temperature} degrees out and ${body.currently.precipProbability}% chance of rain`)
         }
     })
 }
